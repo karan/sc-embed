@@ -5,12 +5,12 @@ Web component wrapper for embedding SoundCloud tracks
 
 ## Options
 
-| Name | Description |
-| --- | ---- |
-| `href` | The id of the SoundCloud track |
-| `width` | The width of the widget |
-| `height` | The height of the widget |
-| `auto_play` | Auto plays if set to `true`, defaults to `false` |
+| Name | Description | Default |
+| --- | ---- | ---- |
+| `href` | The id of the SoundCloud track | None (or is it) |
+| `width` | The width of the widget | 100% |
+| `height` | The height of the widget | 200px |
+| `auto_play` | Auto plays if set to `true` | `false` |
 
 ## Examples
 
