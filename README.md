@@ -3,6 +3,8 @@ sc-embed
 
 Web component wrapper for embedding SoundCloud tracks
 
+**[Live demo](http://karan.github.io/sc-embed/)**
+
 ## Options
 
 | Name | Description | Default |
