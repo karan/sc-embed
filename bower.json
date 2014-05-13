@@ -1,24 +1,14 @@
 {
   "name": "sc-embed",
-  "version": "0.0.1",
-  "authors": [
-    "Karan Goel <karan@goel.im>"
-  ],
+  "private": true,
   "description": "Web component wrapper for embedding SoundCloud tracks",
   "license": "MIT",
   "homepage": "http://github.com/karan/sc-embed",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "keywords": [
     "web-components",
     "soundcloud",
     "music"
-  ]
+  ],
   "dependencies": {
     "polymer": "Polymer/polymer#~0.2.4",
     "core-ajax": "Polymer/core-ajax#~0.2.4"
