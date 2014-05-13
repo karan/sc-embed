@@ -3,12 +3,8 @@
 
 <polymer-element name="tweet-embed">
   <template>
-    <core-ajax
-      auto
-      url="https://api.twitter.com/1/statuses/oembed.json?id={{id}}&align=center"
-      handleAs="json"
-      on-core-response="{{handleResponse}}"></core-ajax>
-    {{handleResponse.html}}
+    <core-ajax url="https://api.twitter.com/1/statuses/oembed.json?id={{id}}&align=center" auto response="{{resp}}"></core-ajax>
+    <p>{{resp.html}}</p>
   </template>
 </polymer-element>
 
