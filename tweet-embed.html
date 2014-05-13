@@ -1,0 +1,15 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/core-ajax/core-ajax.html">
+
+<polymer-element name="tweet-embed">
+  <template>
+    <core-ajax url="https://api.twitter.com/1/statuses/oembed.json?id={{id}}&align=center" auto response="{{resp}}"></core-ajax>
+    {{resp.html}}
+  </template>
+</polymer-element>
+
+<script>
+    Polymer('tweet-embed', {
+      id: "462072621429825536"
+    });
+</script>

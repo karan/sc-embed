@@ -1,0 +1,20 @@
+{
+  "name": "tweet-embed",
+  "version": "0.0.1",
+  "authors": [
+    "Karan Goel <karan@goel.im>"
+  ],
+  "description": "Web component wrapper for embedding tweets",
+  "license": "MIT",
+  "homepage": "http://github.com/karan/tweet-embed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.2.4"
+  }
+}
