@@ -1,12 +1,12 @@
 {
-  "name": "tweet-embed",
+  "name": "sc-embed",
   "version": "0.0.1",
   "authors": [
     "Karan Goel <karan@goel.im>"
   ],
-  "description": "Web component wrapper for embedding tweets",
+  "description": "Web component wrapper for embedding SoundCloud tracks",
   "license": "MIT",
-  "homepage": "http://github.com/karan/tweet-embed",
+  "homepage": "http://github.com/karan/sc-embed",
   "ignore": [
     "**/.*",
     "node_modules",
