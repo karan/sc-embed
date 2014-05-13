@@ -14,8 +14,6 @@ Web component wrapper for embedding SoundCloud tracks
 
 ## Examples
 
-    <sc-embed></sc-embed>
-
     <sc-embed href="149178712"></sc-embed>
 
     <sc-embed href="149178712" auto_play="true"></sc-embed>
