@@ -1,6 +1,6 @@
 {
   "name": "sc-embed",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Web component wrapper for embedding SoundCloud tracks",
   "license": "MIT",
   "homepage": "http://github.com/karan/sc-embed",
