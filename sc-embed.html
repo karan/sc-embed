@@ -14,21 +14,24 @@ Web component wrapper for embedding SoundCloud tracks. [**Live demo**](../sc-emb
 @status alpha
 @homepage http://karan.github.io/sc-embed
 -->
-<polymer-element name="sc-embed" attributes="href width height auto_play">
+<polymer-element name="sc-embed" attributes="href width height auto_play query">
   <template>
-    <iframe width="{{width}}" height="{{height}}" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{href}}&amp;auto_play={{auto_play}}&amp;hide_related=false&amp;visual=true"></iframe>
+    
   </template>
 </polymer-element>
 
 <script>
   Polymer('sc-embed', {
+
+    client_id: 'c2931feadf4c308eb4ccdc7f4a6a3600',
+
     /**
      * The track ID of the song to play
      * 
      * @attribute href
      * @type string
      */
-    href: "149163840",
+    href: null,
 
     /**
      * The width of the widget.
@@ -53,7 +56,30 @@ Web component wrapper for embedding SoundCloud tracks. [**Live demo**](../sc-emb
      * @attribute auto_play
      * @type boolean
      */
-    auto_play: false
+    auto_play: false,
+
+    /**
+     * Plays a track by searching SoundCloud for this query. Can be 
+     * omitted. If both `href` and `query` are provided, `href` has 
+     * higher preference.
+     * 
+     * @attribute query
+     * @type string
+     */
+    // query: '',
+
+    ready: function() {
+      if (!this.href) {
+        SC.initialize({
+          client_id: this.client_id
+        });
+
+        SC.get('/tracks', { q: this.query, limit: 1 }, function(tracks) {
+          this.href = tracks[0].id;
+          this.appendChild('<iframe width="this.width" height="this.height" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/this.href&amp;auto_play=this.auto_play&amp;hide_related=false&amp;visual=true"></iframe>');
+        });
+      }
+    }
 
   });
 </script>
