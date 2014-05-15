@@ -1,2 +1,4 @@
 .bowerrc
 bower_dependencies/
+gp.sh
+.DS_Store
