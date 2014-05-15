@@ -10,6 +10,7 @@
     "music"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.2.4"
+    "polymer": "Polymer/polymer#~0.2.4",
+    "polymer-jsonp": "Polymer/polymer-jsonp#~0.2.4"
   }
 }

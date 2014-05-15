@@ -6,25 +6,72 @@
     <!-- 2. Load the component using an HTML Import -->
     <link rel="import" href="sc-embed.html">
 
-    <script src="//connect.soundcloud.com/sdk.js"></script>
-
     <title>sc-embed</title>
 
     <style>
+      body {
+        font-family: helvetica, serif;
+        text-align: center;
+      }
+      h1 {
+        font-size: 3em;
+        letter-spacing: 4px;
+      }
+      pre {
+        text-align: center;
+        font-size: 1.5em;
+        padding-bottom: 1em;
+        word-wrap: break-word;
+      }
       sc-embed {
         display: block;
         margin-top: 20px;
         margin-bottom: 20px;
       }
+      figure {
+        margin-top: 40px;
+      }
+      pre {
+        font-size: 1.3em;
+        width: 50%;
+        margin: 0 auto;
+      }
+      .share {
+      margin-bottom: 30px;
+    }
     </style>
   </head>
   <body>
-    <!-- 3. Declare the element by its tag. -->
-    <sc-embed query="earth meets water"></sc-embed>
 
-    <!-- <sc-embed href="149178712"></sc-embed> -->
-    <!-- <sc-embed href="149178712" width="50%" auto_play="false"></sc-embed> -->
-  
-    <iframe src="http://ghbtns.com/github-btn.html?user=karan&repo=sc-embed&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+    <h1>&lt;sc-embed&gt;</h1>
+
+    <div class="share">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://karan.github.io/sc-meme/" data-text="Web component wrapper for embedding SoundCloud tracks" data-via="TheKaranGoel" data-size="large">Tweet</a>
+      <iframe src="http://ghbtns.com/github-btn.html?user=karan&repo=sc-embed&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+    </div>
+
+    <!-- 3. Declare the element by its tag. -->
+    <figure>
+      <sc-embed query="earth meets water"></sc-embed>
+      <pre>&lt;sc-embed query="earth meets water"&gt;&lt;/sc-embed&gt;</pre>
+    </figure>
+
+    <figure>
+      <sc-embed href="149178712"></sc-embed>
+      <pre>&lt;sc-embed href="149178712"&gt;&lt;/sc-embed&gt;</pre>
+    </figure>
+
+    <figure>
+      <sc-embed href="149178712" query="armin van buuren" width="50%" height="400px" auto_play="false"></sc-embed>
+      <pre>&lt;sc-embed href="149178712" query="armin van buuren" width="50%" height="400px" auto_play="false"&gt;&lt;/sc-embed&gt;</pre>
+    </figure>
+
+    <figure>
+      <sc-embed href="149178712" width="50%" auto_play="false"></sc-embed>
+      <pre>&lt;sc-embed href="149178712" width="50%" auto_play="false"&gt;&lt;/sc-embed&gt;</pre>
+    </figure>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
   </body>
 </html>
