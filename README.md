@@ -20,7 +20,7 @@ Web component wrapper for embedding SoundCloud tracks
 
 ### Method 1 - bower
 
-    bower install sc-embed
+    bower install sc-embed [--production]
 
 ### Method 2 - Polymer
 
