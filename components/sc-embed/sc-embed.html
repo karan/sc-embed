@@ -1,0 +1,90 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../polymer-jsonp/polymer-jsonp.html">
+
+<!--
+Web component wrapper for embedding SoundCloud tracks. [**Live demo**](../sc-embed/demo.html)
+
+<iframe src="http://ghbtns.com/github-btn.html?user=karan&repo=sc-embed&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+
+##### Example
+
+  Play a track by searching on SoundCloud
+
+    <sc-embed query="earth meets water"></sc-embed>
+
+  Play a track denoted by it's track ID on SoundCloud
+
+    <sc-embed href="149178712" width="50%" auto_play="true"></sc-embed>
+
+@element sc-embed
+@blurb Web component wrapper for embedding SoundCloud tracks
+@status alpha
+@homepage http://karan.github.io/sc-embed
+-->
+<polymer-element name="sc-embed" attributes="href width height auto_play query">
+  <template>
+    <polymer-jsonp id="ajax" auto url="https://api.soundcloud.com/tracks.json?consumer_key={{client_id}}&q={{query}}&filter=all&order=hotness&callback="></polymer-jsonp>
+
+    <iframe width="{{width}}" height="{{height}}" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/{{href}}&amp;auto_play={{auto_play}}&amp;hide_related=false&amp;visual=true"></iframe>
+  </template>
+</polymer-element>
+
+<script>
+  Polymer('sc-embed', {
+
+    /**
+     * Plays a track by searching SoundCloud for this query. Can be 
+     * omitted. If both `href` and `query` are provided, `href` has 
+     * higher preference.
+     * 
+     * @attribute query
+     * @type string
+     */
+
+    /**
+     * The track ID of the song to play
+     * 
+     * @attribute href
+     * @type string
+     */
+
+    /**
+     * The width of the widget.
+     * 
+     * @attribute width
+     * @type string
+     */
+    width: "100%",
+
+    /**
+     * The height of the widget.
+     * 
+     * @attribute height
+     * @type string
+     */
+    height: "200px",
+
+    /**
+     * Auto plays the track on widget load if set to `true`. Defaults to 
+     * `false`. Can be omitted.
+     * 
+     * @attribute auto_play
+     * @type boolean
+     */
+    auto_play: false,
+
+    client_id: 'c2931feadf4c308eb4ccdc7f4a6a3600',
+
+    ready: function() {
+      if (!this.href) {
+        this.href = '-1';
+        this.$.query = this.query;
+
+        this.$.ajax.addEventListener('polymer-response', function(e) {
+          this.href = '' + e.detail.response[0].id;
+        }.bind(this));
+      }
+    }
+
+  });
+</script>

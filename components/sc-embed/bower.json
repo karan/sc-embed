@@ -1,0 +1,17 @@
+{
+  "name": "sc-embed",
+  "version": "0.2.0",
+  "description": "Web component wrapper for embedding SoundCloud tracks",
+  "license": "MIT",
+  "homepage": "http://github.com/karan/sc-embed",
+  "keywords": [
+    "web-components",
+    "soundcloud",
+    "music"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.2.4",
+    "polymer-jsonp": "Polymer/polymer-jsonp#~0.2.4",
+    "voice-elements": "~0.1.2"
+  }
+}

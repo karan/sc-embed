@@ -1,0 +1,26 @@
+{
+  "name": "sc-embed",
+  "description": "Web component wrapper for embedding SoundCloud tracks",
+  "license": "MIT",
+  "homepage": "http://github.com/karan/sc-embed",
+  "keywords": [
+    "web-components",
+    "soundcloud",
+    "music"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.2.4",
+    "polymer-jsonp": "Polymer/polymer-jsonp#~0.2.4",
+    "voice-elements": "~0.1.2"
+  },
+  "_release": "4e67e86d75",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4e67e86d750996afe3a1de21a9bf567eee658c9b"
+  },
+  "_source": "git://github.com/karan/sc-embed.git",
+  "_target": "master",
+  "_originalSource": "karan/sc-embed",
+  "_direct": true
+}
